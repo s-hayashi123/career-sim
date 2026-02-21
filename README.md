@@ -116,33 +116,35 @@ career-sim/
 
 このハブから、実装リポジトリの証跡へリンクします。
 
-### 例（必要に応じて更新）
-
-- `project-atlas-api`（Python / FastAPI / SQLAlchemy）
-  - API設計 / 実装 / バグ修正 / テスト / リファクタ
-- `project-atlas-infra`（AWS / IaC / CI/CD）
+- [`project-atlas-api`](https://github.com/s-hayashi123/project-atlas-api)（Python / FastAPI / SQLAlchemy）
+  - API設計 / 実装 / バグ修正 / テスト / リファクタ / 性能改善
+- `project-atlas-infra`（AWS / Terraform / CI/CD）
   - AWS構成設計 / デプロイ / 監視 / 障害対応
+- `project-atlas-admin`（Next.js / React）
+  - チームダッシュボード管理画面（Project 10で構築）
 
-> 実装リポジトリは分割して、Python実績とAWS実績を見せやすくする方針。
+> 実装リポジトリは分割して、Python実績・AWS実績・フロントエンド実績を見せやすくする方針。
 
 ---
 
-## 10案件の概要（ロードマップ）
+## 10案件 × 100本ノック
 
-> 詳細は [`docs/project-catalog.md`](./docs/project-catalog.md) を参照
+> 詳細は [`docs/roadmap.md`](./docs/roadmap.md)（100本ノック詳細）、[`docs/project-catalog.md`](./docs/project-catalog.md)（案件カタログ）を参照
 
-| Project | テーマ                             | 主な対象要件     |
-| ------- | ---------------------------------- | ---------------- |
-| 01      | 既存Python APIオンボーディング     | P5, P8, P4       |
-| 02      | Pythonバグ修正・再発防止           | P5, P3, P4, P8   |
-| 03      | Python機能追加（API + DB）         | P1, P2, P3, P8   |
-| 04      | Python保守性改善（リファクタ）     | P6, P4, P8       |
-| 05      | Python性能改善（DB含む）           | P7, P2, P8       |
-| 06      | AWS基盤設計（VPC/IAM/構成図）      | A1, A4, A8       |
-| 07      | AWS構築（ECS/RDS/ALB/Secrets）     | A2, A3, A4, A6   |
-| 08      | AWS運用監視・障害対応              | A5, A7, A8 (+P5) |
-| 09      | CI/CD・運用改善                    | A6, A8, P8       |
-| 10      | 機能の設計〜実装〜リリース一貫対応 | P1-8 / A2-8      |
+4-6時間/日で **約16-20週（4-5ヶ月）** を想定。
+
+| Phase | Project | テーマ | 期間目安 | 主な対象要件 |
+|-------|---------|--------|----------|-------------|
+| Python基礎 | 01 | Onboarding（既存API途中参加） | ~2週 | P5, P8, P4 |
+| Python基礎 | 02 | Bugfix（バグ修正・再発防止） | ~2週 | P5, P3, P4, P8 |
+| Python応用 | 03 | Feature（API + DB機能追加） | ~2週 | P1, P2, P3, P8 |
+| Python応用 | 04 | Refactor（保守性改善） | ~2週 | P6, P4, P8 |
+| Python応用 | 05 | Performance（性能改善） | ~2週 | P7, P2, P8 |
+| AWS設計 | 06 | AWS Design（VPC/IAM/構成図） | ~2週 | A1, A4, A8 |
+| AWS構築 | 07 | AWS Build（ECS/RDS/ALB） | ~2週 | A2, A3, A4, A6 |
+| AWS運用 | 08 | AWS Ops/Incident（障害対応） | ~2週 | A5, A7, A8 |
+| 自動化 | 09 | CI/CD・運用改善 | ~2週 | A6, A8, P8 |
+| 総合 | 10 | End-to-End Delivery（+Next.js管理画面） | ~2-3週 | P1-8 / A2-8 |
 
 ---
 
@@ -262,22 +264,20 @@ career-sim/
 
 ### Language / Framework
 
-- Python
-- FastAPI
-- SQLAlchemy
-- Alembic
-- pytest
+- Python / FastAPI / SQLAlchemy / Alembic / pytest
+- Next.js / React（管理画面 - Project 10）
 
 ### Cloud / Infra
 
 - AWS（VPC / ECS / Fargate / RDS / ALB / IAM / CloudWatch / Secrets Manager）
 - Docker / Docker Compose
-- Terraform（予定 / 対象案件で利用）
+- Terraform
 
 ### Dev / Ops
 
 - GitHub Issues / PR / Projects
-- GitHub Actions
+- GitHub Actions（CI/CD）
+- pre-commit / mypy / pip-audit / Trivy
 - ADR / Postmortem / Runbook運用
 
 ---
