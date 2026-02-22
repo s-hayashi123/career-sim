@@ -92,23 +92,23 @@ career-sim/
 ### 各ディレクトリの役割
 
 - `docs/hiring-requirements-mapping.md`  
-  求人票要件 ⇔ 証跡（Issue/PR/Docs）の対応表
+求人票要件 ⇔ 証跡（Issue/PR/Docs）の対応表
 - `docs/evidence-index.md`  
-  採用側向けの証跡目次（代表PR / 構成図 / Postmortem）
+採用側向けの証跡目次（代表PR / 構成図 / Postmortem）
 - `docs/project-catalog.md`  
-  10案件の一覧、目的、成果物、使用技術
+10案件の一覧、目的、成果物、使用技術
 - `docs/weekly-reports/`  
-  週次の進捗・実施内容・次週計画
+週次の進捗・実施内容・次週計画
 - `docs/retros/`  
-  案件ごとの振り返り（改善点 / 学び）
+案件ごとの振り返り（改善点 / 学び）
 - `docs/adr/`  
-  設計判断の記録（Architecture Decision Records）
+設計判断の記録（Architecture Decision Records）
 - `docs/postmortems/`  
-  障害対応記録（原因・影響・再発防止）
+障害対応記録（原因・影響・再発防止）
 - `docs/runbooks/`  
-  運用手順 / セットアップ手順 / 復旧手順
+運用手順 / セットアップ手順 / 復旧手順
 - `scorecards/`  
-  案件ごとの自己評価（再現性・品質・説明力など）
+案件ごとの自己評価（再現性・品質・説明力など）
 
 ---
 
@@ -116,7 +116,7 @@ career-sim/
 
 このハブから、実装リポジトリの証跡へリンクします。
 
-- [`project-atlas-api`](https://github.com/s-hayashi123/project-atlas-api)（Python / FastAPI / SQLAlchemy）
+- `[project-atlas-api](https://github.com/s-hayashi123/project-atlas-api)`（Python / FastAPI / SQLAlchemy）
   - API設計 / 実装 / バグ修正 / テスト / リファクタ / 性能改善
 - `project-atlas-infra`（AWS / Terraform / CI/CD）
   - AWS構成設計 / デプロイ / 監視 / 障害対応
@@ -129,22 +129,24 @@ career-sim/
 
 ## 10案件 × 100本ノック
 
-> 詳細は [`docs/roadmap.md`](./docs/roadmap.md)（100本ノック詳細）、[`docs/project-catalog.md`](./docs/project-catalog.md)（案件カタログ）を参照
+> 詳細は `[docs/roadmap.md](./docs/roadmap.md)`（100本ノック詳細）、`[docs/project-catalog.md](./docs/project-catalog.md)`（案件カタログ）を参照
 
 4-6時間/日で **約16-20週（4-5ヶ月）** を想定。
 
-| Phase | Project | テーマ | 期間目安 | 主な対象要件 |
-|-------|---------|--------|----------|-------------|
-| Python基礎 | 01 | Onboarding（既存API途中参加） | ~2週 | P5, P8, P4 |
-| Python基礎 | 02 | Bugfix（バグ修正・再発防止） | ~2週 | P5, P3, P4, P8 |
-| Python応用 | 03 | Feature（API + DB機能追加） | ~2週 | P1, P2, P3, P8 |
-| Python応用 | 04 | Refactor（保守性改善） | ~2週 | P6, P4, P8 |
-| Python応用 | 05 | Performance（性能改善） | ~2週 | P7, P2, P8 |
-| AWS設計 | 06 | AWS Design（VPC/IAM/構成図） | ~2週 | A1, A4, A8 |
-| AWS構築 | 07 | AWS Build（ECS/RDS/ALB） | ~2週 | A2, A3, A4, A6 |
-| AWS運用 | 08 | AWS Ops/Incident（障害対応） | ~2週 | A5, A7, A8 |
-| 自動化 | 09 | CI/CD・運用改善 | ~2週 | A6, A8, P8 |
-| 総合 | 10 | End-to-End Delivery（+Next.js管理画面） | ~2-3週 | P1-8 / A2-8 |
+
+| Phase    | Project | テーマ                               | 期間目安  | 主な対象要件         |
+| -------- | ------- | --------------------------------- | ----- | -------------- |
+| Python基礎 | 01      | Onboarding（既存API途中参加）             | ~2週   | P5, P8, P4     |
+| Python基礎 | 02      | Bugfix（バグ修正・再発防止）                 | ~2週   | P5, P3, P4, P8 |
+| Python応用 | 03      | Feature（API + DB機能追加）             | ~2週   | P1, P2, P3, P8 |
+| Python応用 | 04      | Refactor（保守性改善）                   | ~2週   | P6, P4, P8     |
+| Python応用 | 05      | Performance（性能改善）                 | ~2週   | P7, P2, P8     |
+| AWS設計    | 06      | AWS Design（VPC/IAM/構成図）           | ~2週   | A1, A4, A8     |
+| AWS構築    | 07      | AWS Build（ECS/RDS/ALB）            | ~2週   | A2, A3, A4, A6 |
+| AWS運用    | 08      | AWS Ops/Incident（障害対応）            | ~2週   | A5, A7, A8     |
+| 自動化      | 09      | CI/CD・運用改善                        | ~2週   | A6, A8, P8     |
+| 総合       | 10      | End-to-End Delivery（+Next.js管理画面） | ~2-3週 | P1-8 / A2-8    |
+
 
 ---
 
@@ -217,22 +219,22 @@ career-sim/
 
 ### Program Progress
 
-- [ ] Project 01: Onboarding（既存Python APIへの途中参加）
-- [ ] Project 02: Bugfix（Pythonバグ修正・再発防止）
-- [ ] Project 03: Feature（API + DB機能追加）
-- [ ] Project 04: Refactor（保守性改善）
-- [ ] Project 05: Performance（性能改善）
-- [ ] Project 06: AWS Design（設計）
-- [ ] Project 07: AWS Build（構築）
-- [ ] Project 08: AWS Ops / Incident（運用・障害対応）
-- [ ] Project 09: CI/CD / Ops Improvement（運用改善）
-- [ ] Project 10: End-to-End Delivery（一貫対応）
+- Project 01: Onboarding（既存Python APIへの途中参加）
+- Project 02: Bugfix（Pythonバグ修正・再発防止）
+- Project 03: Feature（API + DB機能追加）
+- Project 04: Refactor（保守性改善）
+- Project 05: Performance（性能改善）
+- Project 06: AWS Design（設計）
+- Project 07: AWS Build（構築）
+- Project 08: AWS Ops / Incident（運用・障害対応）
+- Project 09: CI/CD / Ops Improvement（運用改善）
+- Project 10: End-to-End Delivery（一貫対応）
 
 ---
 
 ## 代表成果物（Evidence）※随時更新
 
-> 詳細は [`docs/evidence-index.md`](./docs/evidence-index.md)
+> 詳細は `[docs/evidence-index.md](./docs/evidence-index.md)`
 
 ### Python開発
 
@@ -284,9 +286,9 @@ career-sim/
 
 ## 進捗レポート・振り返り
 
-- 週次レポート: [`docs/weekly-reports/`](./docs/weekly-reports/)
-- 案件ごとの振り返り: [`docs/retros/`](./docs/retros/)
-- スコアカード: [`scorecards/`](./scorecards/)
+- 週次レポート: `[docs/weekly-reports/](./docs/weekly-reports/)`
+- 案件ごとの振り返り: `[docs/retros/](./docs/retros/)`
+- スコアカード: `[scorecards/](./scorecards/)`
 
 ---
 
@@ -297,7 +299,7 @@ career-sim/
 - Pythonを用いたソフトウェア開発（API設計・実装、DB操作、テスト、バグ修正、保守改善）
 - AWSを活用したシステム設計・構築（ECS/RDS/ALB/IAM/CloudWatch、CI/CD、障害対応）
 
-詳細な対応関係は [`docs/hiring-requirements-mapping.md`](./docs/hiring-requirements-mapping.md) を参照。
+詳細な対応関係は `[docs/hiring-requirements-mapping.md](./docs/hiring-requirements-mapping.md)` を参照。
 
 ---
 
